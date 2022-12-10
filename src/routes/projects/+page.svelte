@@ -1,26 +1,20 @@
 <svelte:head>
-	<title>About</title>
+	<title>Projects</title>
 	<meta name="description" content="Projects" />
 </svelte:head>
 
-<div class="text-column">
-	<h1>Projects</h1>
 
-	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
-	</p>
+<script>
+	import { onMount } from "svelte";
+	onMount(() => {
+		console.log("Mounted!.") 
+	})
 
-	<pre>npm create svelte@latest</pre>
+</script>
 
-	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
-	</p>
-
-	<p>
-		The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
-		using it with JavaScript disabled!
-	</p>
+<div class="flex p-5">
+	<div class="flex flex-col w-1/3 md:w-1/6 rounded content-evenly space-y-3 p-3 bg-cyan-500">
+		<button class="bg-cyan-300 rounded p-3 text-white hover:bg-cyan-400 duration-500">New Project</button>
+		<button class="bg-cyan-300 rounded p-3 text-white hover:bg-cyan-400 duration-500">Open Project</button>
+	</div>
 </div>
